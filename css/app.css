@@ -13,6 +13,19 @@
  * We are not changing from display:none, but rather re-rendering instead.
  * Therefore this needs to be displayed normally by default.
  */
-#todo-list li .edit {
-  display: inline;
+body{
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
+}
+
+.thin{
+  font-weight: 300;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.p-10{
+  padding: 10px;
 }
