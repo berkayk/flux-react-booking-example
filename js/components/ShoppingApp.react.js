@@ -72,7 +72,9 @@ var ShoppingApp = React.createClass({
           <hr />
           <div className="row">
               <ProductList products={this.state.products}/>
-              <Cart cart={this.state.cart}/>
+              <div className="col-sm-6">
+                <Cart cart={this.state.cart}/>
+              </div>
           </div>
       </div>
     );
