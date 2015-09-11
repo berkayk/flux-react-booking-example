@@ -13,5 +13,7 @@ var keyMirror = require('keymirror');
 
 module.exports = keyMirror({
   ADD_TO_CART: null,
-  REMOVE_FROM_CART: null
+  REMOVE_FROM_CART: null,
+  REMOVE_ALL_FROM_CART: null,
+  EMPTY_CART: null
 });

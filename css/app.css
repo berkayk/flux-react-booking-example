@@ -41,6 +41,10 @@ body{
   border-bottom: 2px solid #DEDEDE;
 }
 
+.right-10{
+  margin-right: 10px;
+}
+
 i{
   padding-right: 8px;
 }

@@ -4,6 +4,7 @@
 var React = require('react');
 var CartItem = require('./CartItem.react');
 var CartTotal = require('./CartTotal.react');
+var CartHeader = require('./CartHeader.react');
 
 var Cart = React.createClass({
     render: function(){
@@ -17,11 +18,11 @@ var Cart = React.createClass({
         }
 
         if (items.length == 0)
-            return (<div className="alert text-center">Your cart is empty.</div>)
+            return <div className="alert text-center">Your cart is empty.</div>
 
         return (
             <div>
-                <h3>There are {items.length} items in cart.</h3>
+                <CartHeader items={items.length} />
                 <ul className="list-unstyled">{items}</ul>
                 <CartTotal total={total}/>
             </div>

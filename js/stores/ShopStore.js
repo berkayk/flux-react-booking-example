@@ -27,18 +27,33 @@ _products[3] = {id: 3, name:"Pants", description: "Some pants too", price: 4.99,
  * Create a TODO item.
  * @param  {string} text The content of the TODO
  */
-function addToCart(product) {
+function addToCart(product, quantity) {
   if (!_cart[product.id]){
-    product.quantity = 1;
-    console.log("Added new item " + product.name);
+    product.quantity = quantity;
+    console.log("Added NEW item " + product.name + " with quantity: " + quantity);
     _cart[product.id] = product;
 
   }
   else
   {
-    _cart[product.id].quantity++;
-    console.log("Increased quantity of " + product.name + " to " + _cart[product.id].quantity);
+    _cart[product.id].quantity += quantity;
+    console.log("Increased quantity of " + product.name + " to " + _cart[product.id].quantity + " by " + quantity);
   }
+  ShopStore.emitCartUpdated();
+}
+
+function removeAllFromCart(product){
+  if (product){
+    delete _cart[product.id];
+    ShopStore.emitCartUpdated();
+  }
+}
+
+function emptyCart(){
+  for (var key in _cart){
+    delete _cart[key];
+  }
+
   ShopStore.emitCartUpdated();
 }
 
@@ -91,14 +106,19 @@ AppDispatcher.register(function(action) {
   switch(action.actionType) {
     case ShopConstants.ADD_TO_CART:
         console.log("Received add to cart at store with: " + action.product.name);
-        addToCart(action.product);
+        addToCart(action.product, action.quantity);
         break;
     case ShopConstants.REMOVE_FROM_CART:
       console.log("Received remove from cart at store with: " + action.product.name);
       removeFromCart(action.product);
-      ShopStore.emitCartUpdated();
       break;
-
+    case ShopConstants.REMOVE_ALL_FROM_CART:
+      console.log("Received remove from cart at store with: " + action.product.name);
+      removeAllFromCart(action.product);
+      break;
+    case ShopConstants.EMPTY_CART:
+      emptyCart();
+      break;
     default:
       // no op
   }

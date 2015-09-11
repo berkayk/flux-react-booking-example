@@ -17,17 +17,29 @@ var ShopActions = {
   /**
    * @param  {string} text
    */
-  addToCart: function(product) {
+  addToCart: function(product, quantity) {
     AppDispatcher.dispatch({
       actionType: ShopConstants.ADD_TO_CART,
+      product: product,
+      quantity: quantity
+    });
+  },
+  removeAllFromCart: function(product){
+    AppDispatcher.dispatch({
+      actionType: ShopConstants.REMOVE_ALL_FROM_CART,
       product: product
     });
   },
   removeFromCart: function(product){
+  AppDispatcher.dispatch({
+    actionType: ShopConstants.REMOVE_FROM_CART,
+    product: product
+  });
+  },
+  emptyCart: function(){
     AppDispatcher.dispatch({
-      actionType: ShopConstants.REMOVE_FROM_CART,
-      product: product
-    });
+      actionType: ShopConstants.EMPTY_CART
+    })
   }
 };
 
