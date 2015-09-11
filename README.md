@@ -1,14 +1,30 @@
 # Shopping Cart Example Based on Flux & React
 
-This app is developed in learning process of Flux & React
+This app is developed in learning process of Flux & React. It is a simple shopping cart example, where you can add/remove items from the product list and remove them.
+There are 3 products in the store, but you can change them easily by modifying them in ShopStore class. In order to simplify things, I just included them in the ShopStore class creation. 
+You can also read them from another .xml file as well if you want.
 
-> All components from [Flux Todo Example](https://github.com/facebook/flux/tree/master/examples/flux-todomvc/) still exists. 
+> All components from [Flux Todo Example](https://github.com/facebook/flux/tree/master/examples/flux-todomvc/) still exists, but none of them are used. Project structure is also the same.
 
-New components are added in order to provide a booking interface where user selects a place to stay, number of rooms, starting date and number of nights.
+## Usage
 
-## Credit
+Please read [Flux Todo Example](https://github.com/facebook/flux/tree/master/examples/flux-todomvc/) usage.
 
-Developed by [Berkay Kaya](https://www.twitter.com/berkayk). 
+## Functionality
 
-## License
-Flux is BSD-licensed. We also provide an additional patent grant.
+There are 4 different methods defined in the store, that you can play with.
+
+```
+function addToCart(product, quantity)
+function removeFromCart(product)
+function removeAllFromCart(product)
+function emptyCart()
+```
+
+## Thanks
+
+Facebook team, [Flux](http://facebook.github.io/flux/), [React](http://facebook.github.io/react/) and [Bill Fisher](https://www.facebook.com/bill.fisher.771)
+
+## Credits
+
+Developed by [Berkay Kaya](https://www.twitter.com/berkayk)

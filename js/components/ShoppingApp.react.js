@@ -42,14 +42,10 @@ function getCart(){
 var ShoppingApp = React.createClass({
 
   getInitialState: function() {
-    console.log("getInitialState");
     return init();
   },
 
   componentDidMount: function() {
-    console.log("componentDidMount");
-    console.log("Products: " + this.state.products.length);
-    console.log("Cart: " + this.state.cart.length);
     ShopStore.addCartUpdatedListener(this._onCartUpdated);
   },
 
