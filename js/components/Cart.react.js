@@ -16,8 +16,11 @@ var Cart = React.createClass({
             total += allCart[key].price * allCart[key].quantity;
         }
 
+        if (items.length == 0)
+            return (<div className="alert text-center">Your cart is empty.</div>)
+
         return (
-            <div className="col-sm-6">
+            <div>
                 <h3>There are {items.length} items in cart.</h3>
                 <ul className="list-unstyled">{items}</ul>
                 <CartTotal total={total}/>
