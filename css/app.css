@@ -29,3 +29,18 @@ body{
 .p-10{
   padding: 10px;
 }
+
+.right-border{
+  border-right: 1px solid #EEE;
+}
+
+.product-item{
+  background-color: #FAFAFA;
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 2px solid #DEDEDE;
+}
+
+i{
+  padding-right: 8px;
+}

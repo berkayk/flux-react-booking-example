@@ -1,4 +1,4 @@
-# Flux & React Booking Example Based on Flux Todo App
+# Shopping Cart Example Based on Flux & React
 
 This app is developed in learning process of Flux & React
 
@@ -8,7 +8,7 @@ New components are added in order to provide a booking interface where user sele
 
 ## Credit
 
-This TodoMVC application was created by [Berkay Kaya](https://www.twitter.com/berkayk). 
+Developed by [Berkay Kaya](https://www.twitter.com/berkayk). 
 
 ## License
 Flux is BSD-licensed. We also provide an additional patent grant.
