@@ -4,7 +4,7 @@ This app is developed in learning process of Flux & React. It is a simple shoppi
 There are 3 products in the store, but you can change them easily by modifying them in ShopStore class. In order to simplify things, I just included them in the ShopStore class creation. 
 You can also read them from another .xml file as well if you want.
 
-> All components from [Flux Todo Example](https://github.com/facebook/flux/tree/master/examples/flux-todomvc/) still exists, but none of them are used. Project structure is also the same.
+> Project structure is the same as [Flux Todo Example](https://github.com/facebook/flux/tree/master/examples/flux-todomvc/)
 
 ## Usage
 

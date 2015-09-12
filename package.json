@@ -1,8 +1,8 @@
 {
-  "name": "todomvc-flux",
-  "version": "0.0.3",
-  "description": "Example Flux architecture.",
-  "repository": "https://github.com/facebook/flux",
+  "name": "shopping-cart-example",
+  "version": "0.0.1",
+  "description": "Shopping Cart Example Based on Flux & React",
+  "repository": "https://github.com/berkayk/flux-react-shopping-cart-example",
   "main": "js/app.js",
   "dependencies": {
     "classnames": "^2.1.3",

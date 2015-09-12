@@ -17,22 +17,6 @@ var Cart = require('./Cart.react');
 var React = require('react');
 var ShopStore = require('../stores/ShopStore');
 
-/**
- * Retrieve the current TODO data from the TodoStore
- */
-function init(){
-  return {
-    products: ShopStore.getAllProducts(),
-    cart: ShopStore.getCart()
-  };
-}
-
-function getProducts() {
-  return {
-    products: ShopStore.getAllProducts()
-  };
-}
-
 function getCart(){
   return {
     cart: ShopStore.getCart()
@@ -42,7 +26,10 @@ function getCart(){
 var ShoppingApp = React.createClass({
 
   getInitialState: function() {
-    return init();
+    return {
+      products: ShopStore.getAllProducts(),
+      cart: ShopStore.getCart()
+    };
   },
 
   componentDidMount: function() {
